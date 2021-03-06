@@ -12,6 +12,12 @@ var taskDataObj = {
     type: taskTypeInput,
 };
 
+if (!taskNameInput || !taskTypeInput){
+    alert("You need to fill out the task form!");
+    return false;
+};
+//i'm not sure what this part is doing
+formEl.reset();
 //send it as an argument to createTaskEl
 createTaskEl(taskDataObj);
 };
